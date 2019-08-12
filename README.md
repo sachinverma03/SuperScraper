@@ -1,8 +1,9 @@
 # SuperScraper
-scrapes data from comics website and compare with purchase to generate various information.
+scrapes data from comics website and compare with purchase to generate various information.\
 For now, Crawls throgh rajcomics.com and crates a list of all comics present in the site
 
-Python -3.6
+
+Python -3.6  
 pip 18.1 from c:\python36\lib\site-packages\pip (python 3.6)
 Scrapy 1.5.1
 
