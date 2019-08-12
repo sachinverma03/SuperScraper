@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for compareOrder project
+# Scrapy settings for SuperScraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'compareOrder'
+BOT_NAME = 'SuperScraper'
 
-SPIDER_MODULES = ['compareOrder.spiders']
-NEWSPIDER_MODULE = 'compareOrder.spiders'
+SPIDER_MODULES = ['SuperScraper.spiders']
+NEWSPIDER_MODULE = 'SuperScraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'compareOrder (+http://www.yourdomain.com)'
+#USER_AGENT = 'SuperScraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'compareOrder.middlewares.CompareorderSpiderMiddleware': 543,
+#    'SuperScraper.middlewares.SuperscraperSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'compareOrder.middlewares.CompareorderDownloaderMiddleware': 543,
+#    'SuperScraper.middlewares.SuperscraperDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'compareOrder.pipelines.CompareorderPipeline': 300,
+#    'SuperScraper.pipelines.SuperscraperPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
