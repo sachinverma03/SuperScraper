@@ -19,3 +19,9 @@ output for now: one json objectof format{'comics':[comcisList]} per link.
 run the 'read.py' file to get a set(redundancy removed) of all names.[To be integrated as a single code in future].  
 
 Next step: Enable login through code to get all the ordered products.  
+
+13/8/19:
+Added Login functionality Usin Formrequest class's from_response method: https://doc.scrapy.org/en/latest/topics/request-response.html#formrequest-objects  
+Had to use formxpath parameter to distinguish forms.  
+also changed references to old project names to new one in config and settings.py file  
+
