@@ -27,7 +27,7 @@ class venom(scrapy.Spider):
 	start_urls = ["https://www.rajcomics.com/index.php/login?task=user.login"]
 
 	def parse(self, response):
-		yield scrapy.FormRequest.from_response(response, formdata={'username': '5achin', 'password': 'vsachi-.'}, 
+		yield scrapy.FormRequest.from_response(response, formdata={'username': '', 'password': ''}, 
 			formxpath = '//*[@id="rc-pagecontent"]/div/div/div/div[1]/form', callback=self.gotoOrders) #xpath generated from page
 		
 
