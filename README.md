@@ -29,5 +29,6 @@ Getting ordered products after login.
 
 'scrapy crawl Venom -o output/orders.jl' To get output in output/orders.jl  
 still not able to distinguish bet shipped/pending etc. 
-To Do: Calling Spiderssss through API to integrate the report generato code(read.py) with spiders.
+To Do: Calling Spiderssss through API to integrate the report generato code(read.py) with spiders.  
+https://docs.scrapy.org/en/latest/topics/practices.html#run-from-script
 
