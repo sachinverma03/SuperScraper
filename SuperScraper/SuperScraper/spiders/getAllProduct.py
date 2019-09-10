@@ -1,9 +1,9 @@
 import scrapy
 
-class spiderMan(scrapy.Spider):
+class spiderMan(scrapy.Spider):#collects all products available
 	name = 'SpiderMan'
 	allowed_domains = ["rajcomics.com"]
-	start_urls = ["https://www.rajcomics.com/index.php/login?task=user.login"]
+	start_urls = ["https://www.rajcomics.com/index.php"]
 	# def start_requests(self):
 	# 	urls = ["https://www.rajcomics.com"]
 
@@ -19,9 +19,41 @@ class spiderMan(scrapy.Spider):
 			link = response.urljoin(link)
 			if(not link.endswith('-detail')): #for individual products
 				yield scrapy.Request(link, callback=self.parse)
+			
+
+class spiderHam(scrapy.Spider): #searches specific attributes
+	name = 'SpiderHam'
+	allowed_domains = ["rajcomics.com"]
+	start_urls = ["https://www.rajcomics.com/index.php"]
+
+	def parse(self, response):
+		links=response.css('a::attr(href)').getall()
+		for link in links:
+			link = response.urljoin(link)
+			if(not link.endswith('-detail')): #for individual products
+				yield scrapy.Request(link, callback=self.parse)
+			else:
+				yield scrapy.Request(link, callback=self.search_attr)
+		
+
+	def search_attr(self, response):
+		# productName = response.xpath('//*[@id="rajcomics-breadcrumb"]/div/div/div/ul/li[5]/span/text()').get().strip()
+		productName = response.css('div.span12').css('h1::text').get()
+		search_str = 'manu'
+		matched_product = []
+		attr_list = []
+		
+		for attr in response.css('div.product-isbn::Text').getall():
+			if(search_str.lower() in attr.lower().strip()):
+				matched_product.append(productName)
+				break
+
+		yield {'comics':matched_product}
 
 
-class venom(scrapy.Spider):
+
+
+class venom(scrapy.Spider): #collects all orders
 	name = 'Venom'
 	allowed_domains = ["rajcomics.com"]
 	start_urls = ["https://www.rajcomics.com/index.php/login?task=user.login"]
