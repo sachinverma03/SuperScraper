@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for SuperScraper project
+# Scrapy settings for SpiderVerse project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'SuperScraper'
+BOT_NAME = 'SpiderVerse'
 
-SPIDER_MODULES = ['SuperScraper.spiders']
-NEWSPIDER_MODULE = 'SuperScraper.spiders'
+SPIDER_MODULES = ['SpiderVerse.spiders']
+NEWSPIDER_MODULE = 'SpiderVerse.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'SuperScraper (+http://www.yourdomain.com)'
+#USER_AGENT = 'SpiderVerse (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'SuperScraper.middlewares.SuperscraperSpiderMiddleware': 543,
+#    'SpiderVerse.middlewares.SpiderverseSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'SuperScraper.middlewares.SuperscraperDownloaderMiddleware': 543,
+#    'SpiderVerse.middlewares.SpiderverseDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'SuperScraper.pipelines.SuperscraperPipeline': 300,
+#    'SpiderVerse.pipelines.SpiderversePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
