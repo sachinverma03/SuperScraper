@@ -3,15 +3,15 @@ import jsonlines
 comset=set()
 ordset=set()
 manuset=set()
-with jsonlines.open('output/comics1.jl') as reader:
+with jsonlines.open('output/comics1.jl') as reader: #File path which contains all the products
 	for obj in reader:
 		comset.update(obj['comics'])
 
-with jsonlines.open('output/orders.jl') as reader:
+with jsonlines.open('output/orders.jl') as reader:#File path which contains orderes products
 	for obj in reader:
 		ordset.update(obj['order'])
 
-with jsonlines.open('output/manuComics.jl') as reader:
+with jsonlines.open('output/manuComics.jl') as reader:#File path which contains Searched products
 	for obj in reader:
 		manuset.update(obj['comics'])
 
