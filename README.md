@@ -53,36 +53,37 @@ Project structure:\
                   __init__.py
                 * getAllProduct.py(Contains the Spiders. Read the documetation in code to get more information about individual spiders)
  
- How to run:
+ How to run:\
    In the root folder(one containing the scrapy.cfg file.) type cmd in address bar to open cmd or you can navigate to this folder after opening cmd.\
-   run the cmd: 'scrapy crawl Spider_name -o output/file_name.jl' to run the desired spiders. crawling may(will definitely) take some (maybe a lot of)time.
-   For Example: 'scrapy crawl SpiderMan -o output/comics1.jl'. gives the name of all  products available on rajcomics.com
-   the same file_name must be used in read.py to fetch corresponding data.
-  output for now: one json object of format{'comics':[comcisList]} per link. We don't Interact with these files directly but via read.py.  
-  It's not necessary to run all the Spiders, only what are required. For Example if we just want the list of available comics, running SpiderMan is sufficient. we just need to comment out the code from read.py which refers/depends to the other Spiders' output
-  Once all the required spiders are run and the required data is collected, run the 'read.py' file to get a set(redundancy removed) of all names.  
+   run the cmd: 'scrapy crawl Spider_name -o output/file_name.jl' to run the desired spiders. crawling may(will definitely) take some (maybe a lot of)time.\\
+   For Example: 'scrapy crawl SpiderMan -o output/comics1.jl'. gives the name of all  products available on rajcomics.com\
+   the same file_name must be used in read.py to fetch corresponding data.\
+  output for now: one json object of format{'comics':[comcisList]} per link. We don't Interact with these files directly but via read.py.  \
+  It's not necessary to run all the Spiders, only what are required. For Example if we just want the list of available comics, running SpiderMan is sufficient. we just need to comment out the code from read.py which refers/depends to the other Spiders' output.\
+  Once all the required spiders are run and the required data is collected, run the 'read.py' file to get a set(redundancy removed) of all names.  \
 
-Misc:
-  To change the name of project in addition to changing the folder name we had to change the name of all refernce in the settings.py and scrapy.cfg to new name in corresponding casing.
-  Scrapy takes care of Duplicate links i.e. makes sure we don't visit same link twice.
-  
-To Dos/ Can be dones:
-  Add Holy cow entertainment and Fenil comics as well.   
-  Date wise matching of available products to spot new additions or sold out goods.   
-  Integerating Spiders annd read.py script to reduce manual work.   
-  combine specific search spider(SpiderHam) and general collector spider(SpiderMan).
-Logs:
-  13/8/19:
-    Added Login functionality Using Formrequest class's from_response method: https://doc.scrapy.org/en/latest/topics/request-response.html#formrequest-objects  
-    Had to use formxpath parameter to distinguish forms.  
-    also changed references to old project names to new one in config and settings.py file  
-
-  15/8/19:  
-    Getting ordered products after login.  
-    'scrapy crawl Venom -o output/orders.jl' To get output in output/orders.jl  
-    still not able to distinguish bet shipped/pending etc. 
-    To Do: Calling Spiderssss through API to integrate the report generato code(read.py) with spiders.  
-    https://docs.scrapy.org/en/latest/topics/practices.html#run-from-script
+Misc:\
+  To change the name of project in addition to changing the folder name we had to change the name of all refernce in the settings.py and scrapy.cfg to new name in corresponding casing.\
+  Scrapy takes care of Duplicate links i.e. makes sure we don't visit same link twice.\
+  \
+To Dos/ Can be dones:\
+  Add Holy cow entertainment and Fenil comics as well.   \
+  Date wise matching of available products to spot new additions or sold out goods.   \
+  Integerating Spiders annd read.py script to reduce manual work.   \
+  combine specific search spider(SpiderHam) and general collector spider(SpiderMan).\
+Logs:\
+  13/8/19:\
+    Added Login functionality Using Formrequest class's from_response method: https://doc.scrapy.org/en/latest/topics/request-response.html#formrequest-objects  \
+    Had to use formxpath parameter to distinguish forms.  \
+    also changed references to old project names to new one in config and settings.py file  \
+\
+\
+  15/8/19:\  
+    Getting ordered products after login.  \
+    'scrapy crawl Venom -o output/orders.jl' To get output in output/orders.jl \ 
+    still not able to distinguish bet shipped/pending etc. \
+    To Do: Calling Spiderssss through API to integrate the report generato code(read.py) with spiders.\  
+    https://docs.scrapy.org/en/latest/topics/practices.html#run-from-script\
   
   
 
