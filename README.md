@@ -1,20 +1,20 @@
 # SpiderVerse
-Aim:
-  Personal project to help make informed choices while buying comics.
-About:
+Aim:\
+  Personal project to help make informed choices while buying comics.\
+About:\
 scrapes data from comics website and gives out useful information.\
 Features to date:\
 Crawls throgh comics website and collects name of all available comics, ordered comics, or comics with a given attribute value.\ 
-Compares them to give out names of all comics already purchased, available but not bought, bought but unavailable, in geral or for a specific search value.
+Compares them to give out names of all comics already purchased, available but not bought, bought but unavailable, in geral or for a specific search value.\
 
-Language/Framework/Libraries used:
+Language/Framework/Libraries used:\
   Python -3.6  \
   pip 18.1 from c:\python36\lib\site-packages\pip (python 3.6)  (to install other frameworks.)\
 
   Scrapy 1.5.1  (Creates the backbone of project. Framework used to scrape data.)\
   scrapy tutorial: https://docs.scrapy.org/en/latest/intro/tutorial.html \ 
 
-  Both the  python and Scrapy should be added to Systems' Environment path variable if we want to run them from anywhere.   
+  Both the  python and Scrapy should be added to Systems' Environment path variable if we want to run them from anywhere. \  
 
   
   jsonlines library to parse jl file output from scrapy Spiders\ 
@@ -22,7 +22,7 @@ Language/Framework/Libraries used:
   (Not in-depth knowledge needed, just how to read the jl files using this library)\
   tutorial: https://jsonlines.readthedocs.io/en/latest/  \
   
-  Any text editor or IDE which supports python. Sublime Text 3 was used originally but is not to be claimed as the best and only option.
+  Any text editor or IDE which supports python. Sublime Text 3 was used originally but is not to be claimed as the best and only option.\
 
 Project structure:\
   It is recommended to go through scrapy's quick tutorial to understand basic scrapy project structure.\
@@ -36,22 +36,22 @@ Project structure:\
   Presently the output of the spiders are stored in the 'output' folder in the root folder as .jl files.\
   The 'read.py' File is a script which, once the spiders have collected all the required data, is run to genrate reports.\
   
-  Final Structure- 
-    * --> not generated automatically from startproject command.
+  Final Structure- \
+    * --> not generated automatically from startproject command.\
       SpiderVerse/
-          scrapy.cfg            # deploy configuration file
-        * read.py
-        * output
-              .jl files with spiders' output
-          SpiderVerse/             # project's Python module.
-              __init__.py
-              items.py          # project items definition file
-              middlewares.py    # project middlewares file
-              pipelines.py      # project pipelines file
-              settings.py       # project settings file
-              spiders/          # a directory where you'll later put your spiders
-                  __init__.py
-                * getAllProduct.py(Contains the Spiders. Read the documetation in code to get more information about individual spiders)
+          scrapy.cfg            # deploy configuration file\
+        * read.py\
+        * output\
+              .jl files with spiders' output\
+          SpiderVerse/             # project's Python module.\
+              __init__.py\
+              items.py          # project items definition file\
+              middlewares.py    # project middlewares file\
+              pipelines.py      # project pipelines file\
+              settings.py       # project settings file\
+              spiders/          # a directory where you'll later put your spiders\
+                  __init__.py\
+                * getAllProduct.py(Contains the Spiders. Read the documetation in code to get more information about individual spiders)\
  
  How to run:\
    In the root folder(one containing the scrapy.cfg file.) type cmd in address bar to open cmd or you can navigate to this folder after opening cmd.\
